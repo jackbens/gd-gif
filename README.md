@@ -8,6 +8,21 @@ https://cnodejs.org/topic/581b2502e90cfbec054d763f
 
 ![enter image description here](https://github.com/pzzcn/gd-gif/blob/master/1.png?raw=true)
 
+# 限制
+
+
+现在的版本还是比较初级的，内置字库只支持0-9的数字，不支持其它字符。
+如果有需要，可以通过getCanvas()方法获取画布，直接操作画布即可。
+比如你想在图片第二个点加入一个蓝色，你可以使用以下代码
+
+    let g=new gif();
+    g.pushColor("0066CC");
+    let c=g.getCanvas();
+    g[0][1]=g.getColorIndex("0066CC");
+
+后通过g.getImage()即可获取图片流
+
+
 # 安装
 
     npm install gd-gif
